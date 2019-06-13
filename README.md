@@ -1,5 +1,11 @@
 #     README   #
 
+Jsquery used to make dynamic events easier to handle
+
+Visually similiar to http://hiragana.training/ 
+
+--> No source code taken from here, other than learning about transforms to better align containers.
+
 # June 12 2019 #
 WIP
 
@@ -11,4 +17,4 @@ Source of vocabulary sorted by JLPT level is imported from a googlespreadsheet w
 
 
 
-Jsquery used to make dynamic events easier to handle
+
