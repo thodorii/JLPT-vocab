@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="jquery.js"> </script>
+        <script src="js.cookie.js"> </script>
+
+        <script src="JSONspreadsheet.js"> </script>
+
+        <script src="https://spreadsheets.google.com/feeds/cells/1j-3_Gslcgp4Hn8Xxz3OJjokKhIRxWQC1JtgKQ_lhnM8/1/public/values?alt=json-in-script&callback=doData"></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1j-3_Gslcgp4Hn8Xxz3OJjokKhIRxWQC1JtgKQ_lhnM8/2/public/values?alt=json-in-script&callback=doData"></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1j-3_Gslcgp4Hn8Xxz3OJjokKhIRxWQC1JtgKQ_lhnM8/3/public/values?alt=json-in-script&callback=doData"></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1j-3_Gslcgp4Hn8Xxz3OJjokKhIRxWQC1JtgKQ_lhnM8/4/public/values?alt=json-in-script&callback=doData"></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1j-3_Gslcgp4Hn8Xxz3OJjokKhIRxWQC1JtgKQ_lhnM8/5/public/values?alt=json-in-script&callback=doData"></script>
+
+        <title>words</title>
+        <meta name="Main">
+        <meta author="Thodori Kapouranis">
+        <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class=quiz-container id=quiz-container>
+
+            <p class=hiragana id=question>options-></p>
+            
+        </div>
+
+        <div class=quiz-container id=text-box>
+            <input type="text" class=answer>
+        </div>
+
+
+        <div class=quiz-container id=score>
+            <p id="score-count"></p>
+
+        </div>
+
+        <div class="quiz-container answer-result">
+           <!-- <img src="images/checked.png" class="answer-result correct"> -->
+            
+        </div> 
+ 
+        
+        <div class=settings> <!-- I dont actually use this class-->
+
+            <img src="images/settings.png" class=" settings-container settings-icon">
+            <img src="images/moon-phase-outline.png" class="settings-container nightmode">
+
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

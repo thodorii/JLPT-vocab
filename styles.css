@@ -1,0 +1,237 @@
+:root{
+    --backgroundColor: rgb(252, 232, 208);
+    --textQuestionColor: black; 
+
+}
+
+
+*{
+    font-family: 'Kosugi Maru', sans-serif
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-color: var(--backgroundColor);
+}
+.quiz-container {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+   /* background-color: gray;*/
+    width: 80%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  @keyframes questionAppear{
+      from {
+          color: rgba(0, 0, 0, 0);
+      }
+      to {
+          color: rgba(0, 0, 0, 1);
+      }
+  }
+    .hiragana {
+        font-size: 8rem;
+        line-height: 8rem;
+        color: black;
+        font-weight: lighter;
+        animation-name: questionAppear;
+        animation-duration: 1s;
+    }
+    .answer {
+        background-color: var(--backgroundColor);
+        width:50%;
+        font-size: 3rem;
+        border-color: var(--backgroundColor);
+        bottom:50%; 
+        text-align: center;
+        -ms-transform: translate(0%, 120px);
+        -moz-transform: translate(0%, 120px);
+        -webkit-transform: translate(0%, 120px);
+        transform: translate(0%, 120px);
+    }
+
+    @keyframes result {
+        from {
+            opacity: 1;
+            top:28%;
+        }
+        to {
+            opacity: 0;
+            top:-20%;
+        }
+    }
+
+    .answer-result  {
+        width: 100px;
+        height:100px;
+        display: block;
+        position: absolute;
+        top:28%;
+    }
+    
+  
+    .answer-result.correct{
+        opacity:1;
+        animation-name: result;
+        animation-duration: 2s;
+        opacity:0;
+    }
+
+    .answer-result.wrong{
+        opacity:1;
+        animation-name: result;
+        animation-duration: 2s;
+        opacity:0;
+    }
+
+    .answer-result p{
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+       /* background-color: gray;*/
+        width: 600px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 20%);
+        text-align: center;
+    }
+    #correction{
+        animation-name: result;
+        animation-duration: 4s;
+        font-size: 3em;
+
+        text-align: center;
+    }
+
+    #score-count {
+        font-size: 3rem;
+        text-align: center;
+        -ms-transform: translate(0px,200px);
+        -moz-transform: translate(0px, 200px);
+        -webkit-transform: translate(0%, 200px);
+        transform: translate(0px, 200px);
+    }
+
+.settings-container{
+    position: absolute;
+    display: block;
+    right:1%;
+    top:1%;
+    border-style: solid;
+    padding: 2px;
+    border-radius: 20px;
+    border-color: black;
+    width:50px;
+    height:50px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard **/
+}
+
+.settings-icon {
+
+    transition: transform .2s ease-in-out;
+}
+.settings-icon:hover{
+    background-color: rgb(255,196,124)!important; /*so JS doesn't overwrite*/
+    transform: rotateZ(90deg);
+}
+.nightmode{
+    right:75px;
+    
+}
+.nightmode:hover{
+    background-color: rgb(228, 250, 103)!important;
+}
+
+@keyframes setting-show-anim{
+from{
+    right:0%;
+}
+to{
+    right:1%;
+}
+}
+
+.settings-show{   /* this is sort of redundant*/
+    position: absolute;
+    display: block;
+    right:1%;
+    border-style: solid;
+    font-size: 3rem;
+    font-weight: thin;
+    text-align: center;
+    padding: 2px;
+    border-radius: 20px;
+    border-color: black;
+    width:50px;
+    height:50px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    animation-name: setting-show-anim;
+    animation-duration: .5s;
+}
+
+
+    #sHira{
+        top:5%;
+    }
+    #sKata{
+        top:15%;
+    }
+    #sN5{
+        top:25%;
+    }
+    #sN4{
+        top:35%;
+    }
+    #sN3{
+        top:45%;
+    }
+    #sN2{
+        top:55%;
+    }
+    #sN1{
+        top:65%;
+    }
+        #sHira:hover{
+            background-color: rgba(80, 218, 253, .6)!important;
+        }
+        #sKata:hover{
+            background-color: rgba(74, 101, 255, 0.6)!important;
+        }
+        #sN5:hover{
+            background-color: rgba(74, 255, 89, 0.6)!important;
+        }
+        #sN4:hover{
+            background-color: rgba(146, 255, 44, 0.6)!important;
+        }
+        #sN3:hover{
+            background-color: rgba(195, 253, 59, 0.6)!important;
+        }
+        #sN2:hover{
+            background-color: rgba(252, 187, 48, 0.6)!important;
+        }
+        #sN1:hover{
+            background-color: rgba(255, 85, 34, 0.6)!important;
+        }
