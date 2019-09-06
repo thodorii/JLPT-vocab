@@ -18,9 +18,13 @@ Source of vocabulary sorted by JLPT level is imported from a googlespreadsheet w
 
 # August 6 2019 # 
 Im adding this here to add feature later:
+
 - Learn how Anki stores its card fields and be able to import it to this website to custom study a group of words, sorted by:
+
   ↪creation date(***)
+  
   ↪total review count(!!!)
+  
   ↪tags?
   
 
